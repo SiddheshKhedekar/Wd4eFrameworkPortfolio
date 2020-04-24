@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Siddhesh Khedekar</title>
+        <link rel="icon" href="download.png" type="image/gif" sizes="16x16">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            /* Remove the navbar's default margin-bottom and rounded borders */ 
+            .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            }
+            /* Add a gray background color and some padding to the footer */
+            footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#">My Portfolio</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#about">About Me</a></li>
+                        <li><a href="#work">Work Experience</a></li>
+                        <li><a href="#edu">Education</a></li>
+                        <li><a href="#loc">Location</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="jumbotron" id="about">
+            <div class="container text-center">
+                <h1>Siddhesh Khedekar</h1>
+                <p>Programmer, <b>Ambivert</b> and  Intellectual Maverick.</p>
+            </div>
+        </div>
+        <div class="container-fluid bg-3 text-center" id="work">
+            <h3>Work Experience</h3>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>Android Developer, May 2018 - Aug 2018</p>
+                    <img src="logo1.png" class="img-responsive" style="width:100%" alt="Image">
+                </div>
+                <div class="col-sm-6">
+                    <p>Content Writer, May 2017 - Dec 2017</p>
+                    <img src="logo2.png" class="img-responsive" style="width:100%" alt="Image">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid bg-3 text-center" id="edu">
+            <h3>Education</h3>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>Postgraduation</p>
+                    <img src="logo3.png" class="img-responsive" style="width:100%" alt="Image">
+                </div>
+                <div class="col-sm-6">
+                    <p>Graduation</p>
+                    <img src="logo4.png" class="img-responsive" style="width:100%" alt="Image">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-3 text-center" id="loc">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Location</h3>
+                    <br>
+                    <p>Home is where the heart is.</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15087.840245799875!2d72.83420557581364!3d19.02148148001479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cedb0ea0cd0f%3A0x428a465039995bd0!2sDadar%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1587708402653!5m2!1sen!2sin" class="fakeimg" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="col-sm-6">
+                    <h3>Give my website a score</h3>
+                    <br>
+                    <div id="score"><button onClick="askScore()">Your Evaluation</button></div>
+                </div>
+                <script>
+                    function askScore(){
+                        var score = prompt("Score in between 1 to 10");
+                        var comment = "You didn't play by the rules. Not Cool.";
+                        if (score != null && !isNaN(score)) {
+                            if (score >= 1 && score < 4) {
+                                comment = "You gave my website a score of " + score + ". I think I did better.";
+                            } else if (score >= 4 && score < 7) {
+                                comment = "You gave my website a score of " + score + ". Appretiated.";
+                            } else if (score >= 7 && score <= 10) {
+                                comment = "You gave my website a score of " + score + ". Thank You.";
+                            } else {}
+                            document.getElementById("score").innerHTML = comment;
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br>
+        <footer class="container-fluid text-center">
+            <p>Find me on social media.</p>
+            <a href="https://www.facebook.com/profile.php?id=100005541707473">Facebook</a>
+            <a href="https://www.instagram.com/khedekarsiddhesh/?hl=en">Instagram</a>
+            <a href="https://github.com/SiddheshKhedekar">Github</a>
+            <a href="https://in.pinterest.com/siddheshdragon/">Pintrest</a>
+            <a href="https://twitter.com/Siddhesh007">Twitter</a>
+            <a href="https://www.linkedin.com/in/siddhesh-khedekar-alphadeveloper/">Linkedin</a>
+            <p>Powered by <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></p>
+        </footer>
+    </body>
+</html>
